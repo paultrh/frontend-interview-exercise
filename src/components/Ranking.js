@@ -20,10 +20,12 @@ import {
 class Ranking extends PureComponent {
   static propTypes = {
     profiles: PropTypes.arrayOf(PropTypes.object),
+    onSelectProfile: PropTypes.func,
   }
 
   static defaultProps = {
     profiles: [],
+    onSelectProfile: () => {},
   }
 
   constructor(props) {
@@ -50,7 +52,7 @@ class Ranking extends PureComponent {
           <h1>Classement</h1>
           <Toggle
             value={period}
-            options={{ month: 'Ce mois ci', week: 'Cette semaine' }}
+            options={{ month: 'Ce mois ci', week: 'Cette semaine', last_week: 'Semaine précédente' }}
             onChange={this.handlePeriodChange}
           />
         </StyledHeader>
@@ -58,7 +60,7 @@ class Ranking extends PureComponent {
           <StyledRanking>
             {profiles.map(user => (
               <li key={user.id}>
-                <StyledImg>
+                <StyledImg onClick={() => this.props.onSelectProfile(user)}>
                   <ProfilePic size={48} userName={user.name} picture={user.picture} />
                 </StyledImg>
                 {user.name}

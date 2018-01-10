@@ -3,6 +3,9 @@
   "rules": {
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
   },
+  "env": {
+    "jest": true
+  },
   "globals": {
     "document": false,
     "window": false,
@@ -10,5 +13,6 @@
     "require": false,
     "alert": false,
     "FileReader": false
-  }
+  },
+  "parser": "babel-eslint"
 }

@@ -1,34 +1,41 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 
-
-import Modal from '../../layout/Modal/Modal';
-
-
-
-
-import logo from './logo.svg';
 import './App.css';
 
+import PROFILES from './profiles.json';
+
+import Ranking from './components/Ranking';
+import Modal from './components/Modal';
+import UserInfo from './components/UserInfo';
+
+
 class App extends Component {
+  state = {
+    profiles: [],
+  };
+
+  componentWillMount() {
+    this.setState({
+      profiles: PROFILES,
+    });
+  }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-
-        <RankingPage />
-        <Modal show={isCreatingMission}>
-          <MissionEditor
-            onCancel={this.resetCreateMission}
-            onSubmit={this.resetCreateMission}
-          />
-        </Modal>
+      <div>
+        <Ranking
+          profiles={this.state.profiles}
+          onSelectProfile={() => {}}
+        />
+        <div>
+          <Modal show={false} onHide={() => {}}>
+            <UserInfo
+              picture={null}
+              name=""
+              points={0}
+            />
+          </Modal>
+        </div>
       </div>
     );
   }

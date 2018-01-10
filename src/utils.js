@@ -6,12 +6,13 @@ export const getRankingTimeframeInterval = (timeframeSelector) => {
       start: moment().startOf('isoWeek'),
       stop: moment(),
     };
+  } else if (timeframeSelector === 'month') {
+    return {
+      start: moment().startOf('month'),
+      stop: moment(),
+    };
   }
-  return {
-    // start: moment().subtract(1, 'months'),
-    start: moment().startOf('month'),
-    stop: moment(),
-  };
+  return null;
 };
 
 export const computeRanking = (profiles, timeframeSelector) => {
@@ -20,8 +21,9 @@ export const computeRanking = (profiles, timeframeSelector) => {
   return profiles
     .filter(profile => profile.registered)
     .map(profile => ({
-      id: profile.id.toString(),
+      id: profile.id,
       name: profile.full_name,
+      picture: profile.avatar,
       points: profile.received_rewards.reduce((total, reward) => {
         const creation = moment(reward.created_at);
         if (creation.isBetween(start, stop, 'day', '[]')) { // last param for day inclusion
@@ -29,6 +31,5 @@ export const computeRanking = (profiles, timeframeSelector) => {
         }
         return total;
       }, 0),
-      picture: profile.avatar,
     })).sort((a, b) => b.points - a.points);
 };

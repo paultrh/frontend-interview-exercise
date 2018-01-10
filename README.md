@@ -9,8 +9,9 @@ Unfortunately, this webapp is not totally integrated, and it's broken 🤕 !
 Your mission, if you accept it 😎, will be to finish what's missing and make it works.
 
 - First, you have to get ready for development. Fork the project on github, get the files on your computer, setup the environment, then start the development server. You should see the simple app, with a ranking list.
-- The "Ranking" component is not fully integrated. With the 'ranking-design.png' as the reference, create the missing part of the component and style it appropriately.
-- It looks like there is a bug in the interface. Find the reason, and solve it.
+- The "Ranking" component is not fully integrated. With the 'ranking-design.png' as the design reference, add styles to the component.
+- It seems there is a bug with the time frame selector in the right corner. Find the source of that bug, and solve it to make it work.
+-
 
 
 ## Project setup
