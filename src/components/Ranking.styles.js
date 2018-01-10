@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { neutrals, spacings } from '../theme';
 
+// TODO: This component needs some more styles
 export const StyledRanking = styled.ol`
   max-width: 584px;
   margin: 0 auto;
