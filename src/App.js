@@ -27,15 +27,13 @@ class App extends Component {
           profiles={this.state.profiles}
           onSelectProfile={() => {}}
         />
-        <div>
-          <Modal show={false} onHide={() => {}}>
-            <UserInfo
-              picture={null}
-              name=""
-              points={0}
-            />
-          </Modal>
-        </div>
+        <Modal show={false} onHide={() => {}}>
+          <UserInfo
+            picture={null}
+            name=""
+            points={0}
+          />
+        </Modal>
       </div>
     );
   }
