@@ -1,3 +1,5 @@
+import { css } from 'styled-components';
+
 /**
  * Main colors
  */
@@ -5,8 +7,6 @@ export const colors = {
   primary: '#449aff',
   secondary: '#a973f4',
   third: '#f93987',
-  // success: '#64C635',
-  // jhkqds: '#60CB37',
   success: '#7ABC31',
   warning: '#f6a623',
   danger: '#ed4141',
@@ -18,18 +18,11 @@ export const colors = {
 export const neutrals = {
   lightest: '#FFFFFF',
   lighter: '#F5F7FA',
-  light: '#CCCCCC',
   dark: '#999999',
-  darker: '#434247',
   darkest: '#2C2D30',
   borderLighter: '#ecf0f6',
   borderLight: '#e1e1e1',
-  actionDark: '#555459',
-  selectBarLight: '#e7eaee',
   buttonDefaultColor: '#575757',
-  lightestBlue: '#F2F8FF',
-  lightBlue: '#e9f1f9',
-  separatorGrey: '#e8e8e8',
 };
 
 /**
@@ -44,16 +37,24 @@ export const spacings = {
 };
 
 /**
- * Navbar widths
+ * Reset button styles
  */
-export const navbar = {
-  s: 10,
-  m: 240,
-};
+export const resetButton = () => css`
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+`;
+
 
 /**
- * Sizings
+ * Rotated square
  */
-export const sizes = {
-  heading: 70,
-};
+export const diamond = (size = 8) => css`
+  width: ${size}px;
+  height: ${size}px;
+  transform: rotate(45deg);
+`;
