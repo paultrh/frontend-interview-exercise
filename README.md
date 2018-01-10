@@ -5,7 +5,9 @@ A short exercise to work on, as a technical interview preparation
 
 ## Instructions
 In this project, you will find a small front-end application built with React and some other javascript libraries.
+
 Unfortunately, this webapp is not totally integrated, and it's broken 🤕 !
+
 Your mission, if you accept it 😎, will be to finish what's missing and make it works.
 
 - First, you have to get ready for development. **Fork the project on github, get the files on your computer, setup the environment, then start the development server**. You should see the simple app, with a ranking list.
