@@ -5,12 +5,14 @@
   "main": "index.js",
   "author": "Jeremy Hermelin",
   "dependencies": {
+    "lato-font": "^3.0.0",
     "moment": "^2.20.1",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-overlays": "^0.8.3",
     "react-scripts": "1.0.17",
+    "reset-css": "^2.2.1",
     "styled-components": "^2.4.0"
   },
   "scripts": {

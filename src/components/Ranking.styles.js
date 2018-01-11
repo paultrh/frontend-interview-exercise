@@ -3,10 +3,9 @@ import { neutrals, spacings } from '../theme';
 
 // TODO: This component needs some more styles
 export const StyledRanking = styled.ol`
-  max-width: 584px;
+  max-width: 613px;
   margin: 0 auto;
   padding: 0;
-  border-radius: 6px;
   background-color: ${neutrals.lightest};
 
   > li {
@@ -62,7 +61,7 @@ export const StyledHeader = styled.header`
   display: flex;
   padding: ${spacings.m}px;
   justify-content: space-between;
-  font-size: 14px;
+  font-size: 19px;
   line-height: 30px;
   margin-left: ${spacings.s}px;
   color: ${neutrals.darkest};
