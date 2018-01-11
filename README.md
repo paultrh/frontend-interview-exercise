@@ -35,11 +35,12 @@ Below you will find some commands on how to perform common tasks.
   $ npm run build
 
 ```
-If you need more information, you can find the complete version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
+If you need more information, you can find the complete version of Create React App guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
 
-The project uses the [styled-components](https://www.styled-components.com/) module for the component styling. If you've never used this module, you may be confused when looking for css files (Styling is done in normal javascript files). Remember that it is the same syntax than css, but augmented with some javascript super powers. Check [the docs](https://www.styled-components.com/docs) if lost.
+
+The project uses the [styled-components](https://www.styled-components.com/) module for the components styling. If you've never used this module, you may be confused when looking for css files (styling is done in normal javascript files). Remember that it is the same syntax than css, but augmented with some javascript super powers. Check [the docs](https://www.styled-components.com/docs) if lost.
 
 ## Rules to remember
 - It should take between 30 min to 2 hours to do it, depending on your approach and your knowledge. Don't make it bigger than what it is.
 - Don't sweat it. If you're stuck, take notes of what you have so we can talk about it during the meeting and see how to solve it.
-- Don't hesitate to comment your code to explain what you've done.
+- Commenting your code to explain what you've done is always welcome.
