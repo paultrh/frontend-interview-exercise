@@ -1,11 +1,11 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-import { computeRanking } from '../utils';
+import { computeRanking } from '../../utils';
 
 
-import Toggle from './Toggle';
-import ProfilePic from './ProfilePic';
+import Toggle from '../Toggle';
+import ProfilePic from '../ProfilePic';
 
 import {
   StyledRanking,

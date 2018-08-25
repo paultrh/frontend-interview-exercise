@@ -23,6 +23,8 @@ export const neutrals = {
   borderLighter: '#ecf0f6',
   borderLight: '#e1e1e1',
   buttonDefaultColor: '#575757',
+  userEvenBackground: '#F7F9FB',
+  shadowColor:  '#DAE2E6'
 };
 
 /**

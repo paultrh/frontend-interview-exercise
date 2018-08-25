@@ -1,9 +1,11 @@
 import styled from 'styled-components';
-import { neutrals, spacings } from '../theme';
+import { neutrals, spacings } from '../../theme';
 
 // TODO: This component needs some more styles
 export const StyledRanking = styled.ol`
   max-width: 613px;
+  border-radius: 4px;
+  box-shadow: 0px 1px 8px ${neutrals.shadowColor};
   margin: 0 auto;
   padding: 0;
   background-color: ${neutrals.lightest};
@@ -11,7 +13,16 @@ export const StyledRanking = styled.ol`
   > li {
     counter-increment: item;
 
+    height: 80px;
+    display: flex;
+    padding-right: 32px;
+    padding-left: 40px;
+    align-items: center;
+    font-weight: bold;
+    font-size: 13px;
+
     ::before {
+      font-weight: 600;
       content: counter(item);
       margin-right: ${spacings.m}px;
     }
@@ -34,6 +45,10 @@ export const StyledRanking = styled.ol`
     :nth-child(3)::after {
       content: '🥉';
     }
+
+    :nth-child(even) {
+      background: ${neutrals.userEvenBackground};
+    }
   }
 `;
 
@@ -43,8 +58,10 @@ export const StyledPoints = styled.span`
 
 export const StyledImg = styled.div`
   margin-right: ${spacings.m}px;
+  padding-right: 24px;
+  height: 48px;
+  width: 48px;
 `;
-
 
 export const StyledContainer = styled.div`
   margin: 0 auto;
